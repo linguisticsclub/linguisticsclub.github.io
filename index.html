@@ -5,7 +5,8 @@ layout: default
 <div class="home">
 
 	<div class="welcome">
-		{% markdown welcome.md %}
+		{% capture my-include %}{% include welcome.md %}{% endcapture %}
+{{ my-include | markdownify }}
 	</div>
   <h1 class="page-heading">Past Meetings</h1>
 
